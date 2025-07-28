@@ -39,8 +39,7 @@ Este projeto provisiona uma instância EC2 na AWS configurada para monitorar um 
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/oJotaaa/aws-monitor.git
-cd aws-monitor
+git clone https://github.com/oJotaaa/nginx-watcher.git
 ```
 
 2. Crie um arquivo `secrets.auto.tfvars` na raiz do projeto:
