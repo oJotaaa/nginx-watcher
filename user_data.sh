@@ -2,7 +2,7 @@
 
 # Garante que a lista de pacotes está atualizada antes de instalar algo.
 apt-get update -y
-apt-get install -y nginx curl unzip
+apt-get install -y nginx curl
 
 # Iniciar e habilitar o NGINX
 systemctl start nginx
