@@ -53,9 +53,9 @@ Copie o conteúdo do arquivo `secrets.auto.tfvars.example` e substitua pelos seu
 3. Inicie o Terraform:
 
 ```bash
-terraform init
-terraform plan
-terraform apply
+terraform init 
+terraform plan # para visualizar o que será criado
+terraform apply # para a criação da infraestrutura
 ```
 
 4. Após a criação, o Terraform mostrará o IP público da instância. Acesse via navegador ou SSH:
