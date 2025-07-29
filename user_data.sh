@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Garante que a lista de pacotes está atualizada antes de instalar algo.
+# Garante que a lista de pacotes está atualizada antes de instalar algo
 apt-get update -y
 apt-get install -y nginx curl
 
@@ -8,7 +8,7 @@ apt-get install -y nginx curl
 systemctl start nginx
 systemctl enable nginx
 
-# CRIAR A PÁGINA HTML PERSONALIZADA
+# Criar a página HTML
 cat <<EOF > /var/www/html/index.html
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +25,7 @@ EOF
 # Cria o diretório aws-monitor
 mkdir -p /var/opt/aws-monitor
 
-# Cria o script de monitoramento no diretório /opt/aws-monitor
+# Cria o script de monitoramento no diretório /var/opt/aws-monitor
 cat <<EOF > /var/opt/aws-monitor/monitor.sh
 #!/bin/bash
 
@@ -52,9 +52,8 @@ if [ "\$STATUS" != "200" ]; then
 fi
 EOF
 
-# Torna o script de monitoramento executável.
+# Torna o script de monitoramento executável
 chmod +x /var/opt/aws-monitor/monitor.sh
 
-# Configura o Cron para executar o script a cada 1 minuto.
+# Configura o Cron para executar o script a cada 1 minuto
 echo "*/1 * * * * root /var/opt/aws-monitor/monitor.sh" > /etc/cron.d/system-monitor
-# --- FIM DO SCRIPT ---
