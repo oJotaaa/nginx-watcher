@@ -22,6 +22,9 @@ cat <<EOF > /var/www/html/index.html
 </html>
 EOF
 
+# Altera o fuso horário para America/Sao Paulo
+sudo timedatectl set-timezone America/Sao_Paulo
+
 # Cria o diretório aws-monitor
 mkdir -p /var/opt/aws-monitor
 
