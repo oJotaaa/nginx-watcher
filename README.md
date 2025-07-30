@@ -33,6 +33,7 @@ Este projeto provisiona uma instância EC2 na AWS configurada para monitorar um 
 - Terraform instalado
 - AWS CLI configurado (com credenciais)
 - Um par de chaves SSH gerado em `~/.ssh/` (O projeto gera uma chave automaticamente para você)
+- Token do seu Webhook
 
 ### Como usar (implantação)
 
@@ -44,7 +45,7 @@ git clone https://github.com/oJotaaa/nginx-watcher.git
 
 2. Crie um arquivo `secrets.auto.tfvars` na raiz do projeto:
 
-Copie o conteúdo do arquivo `secrets.auto.tfvars.example` e substitua pelos seus valores.
+Copie o conteúdo do arquivo `secrets.auto.tfvars.example` e cole no arquivo criado substituindo pelos seus valores.
 
 <div align="left">
 <img src="https://cdn.discordapp.com/attachments/749695145598779392/1399483500863946922/image.png?ex=68892a13&is=6887d893&hm=8c4eb53b031cef6ec0678b6eedc6c71858b61e9b4610bf767d3ee70e8540446a&" width="400px" />
