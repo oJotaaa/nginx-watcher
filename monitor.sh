@@ -2,7 +2,7 @@
 
 # Configurações
 URL="http://localhost/"
-WEBHOOK_URL="COLOQUE_SEU_TOKEN_AQUI"
+WEBHOOK_URL="${TOKEN}"
 LOG_FILE="/var/log/monitoramento.log"
 
 # Checar o status HTTP
