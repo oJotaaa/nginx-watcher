@@ -61,7 +61,7 @@ terraform apply # para a criação da infraestrutura
 4. Após a criação, o Terraform mostrará o IP público da instância. Acesse via navegador ou SSH:
 
 ```bash
-ssh -i "SUA_KEY_PAIR_AQUI.pem" ubuntu@<IP_PUBLICO>
+ssh -i "~/.ssh/id_rsa" ubuntu@<SEU_IP_PUBLICO>
 ```
 
 ### Dentro da instância:
