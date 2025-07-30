@@ -33,7 +33,21 @@ Este projeto provisiona uma instância EC2 na AWS configurada para monitorar um 
 - Terraform instalado
 - AWS CLI configurado (com credenciais)
 - Token do seu Webhook
-- Um par de chaves SSH gerado em `~/.ssh/` (O projeto gera uma chave automaticamente para você)
+- Um par de chaves SSH: Necessário para o acesso seguro à instância. O projeto espera encontrar os arquivos `id_rsa` e `id_rsa.pub` no diretório padrão `~/.ssh/`. Veja as instruções abaixo caso não possua.
+
+### Gerando o Par de Chaves SSH (Caso não possua)
+Este projeto utiliza um par de chaves SSH existente em sua máquina para configurar o acesso seguro à instância EC2. O Terraform irá importar sua **chave pública** (`id_rsa.pub`) para a AWS.
+Se você ainda não possui esse par de chaves, gere um com o seguinte comando no seu terminal (Linux, macOS ou PowerShell):
+
+```bash
+ssh-keygen -t rsa -b 4096
+```
+
+Pressione `Enter` em todas as etapas para aceitar os valores padrão. Isso criará os arquivos necessários no local que o projeto espera `~/.ssh/`.
+
+- `~/.ssh/id_rsa`: Sua chave privada. Mantenha-a segura e nunca a compartilhe.
+
+- `~/.ssh/id_rsa.pub`: Sua chave pública, que será usada pelo Terraform.
 
 ### Como usar (implantação)
 
