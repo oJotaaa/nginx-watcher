@@ -60,3 +60,8 @@ chmod +x /var/opt/aws-monitor/monitor.sh
 
 # Configura o Cron para executar o script a cada 1 minuto
 echo "*/1 * * * * root /var/opt/aws-monitor/monitor.sh" > /etc/cron.d/system-monitor
+
+# Configura o service Nginx para reiniciar automaticamente caso o servidor fique fora do ar
+sed -i '/\[Service\]/a Restart=always\nRestartSec=10' /lib/systemd/system/nginx.service
+systemctl daemon-reload
+systemctl restart nginx
