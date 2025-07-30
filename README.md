@@ -58,8 +58,7 @@ git clone https://github.com/oJotaaa/nginx-watcher.git
 ```
 
 2. Crie um arquivo `secrets.auto.tfvars` na raiz do projeto:
-
-Copie o conteúdo do arquivo `secrets.auto.tfvars.example` e cole no arquivo criado substituindo pelos seus valores.
+- Copie o conteúdo do arquivo `secrets.auto.tfvars.example` e cole no arquivo criado substituindo pelos seus valores.
 
 <div align="left">
 <img src="https://cdn.discordapp.com/attachments/749695145598779392/1400155899951317023/image.png?ex=688b9c4c&is=688a4acc&hm=380d015ce6cb2430a57418675855bd94191c96dfe4d2b8e98b9c3f962d8eae35&" width="300px" />
