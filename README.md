@@ -80,6 +80,36 @@ Se estiver indicando Active (Running), está tudo certo.
 <img src="https://cdn.discordapp.com/attachments/749695145598779392/1399486160648278016/image.png?ex=68892c8d&is=6887db0d&hm=2746b4af3f030f550751382bb6926dba652f844ebd26b79228f9cdc2f970895e&" width="400px" />
 </div>
 
+## Desativar reinício automático do Nginx antes do teste de notificação
+
+Antes de iniciar o teste de notificação, é necessário desativar o reinício automático do servidor Nginx em caso de falha para evitar interferências.
+
+Siga os passos abaixo:
+
+1. Edite o arquivo do serviço do Nginx:
+
+   ```bash
+   sudo vim /usr/lib/systemd/system/nginx.service
+   ```
+
+2. Localize a seção `[Service]` e comente as duas primeiras linhas referentes ao reinício automático, adicionando o caractere `#` no início de cada uma. Por exemplo:
+
+   ```ini
+   [Service]
+   #Restart=always
+   #RestartSec=10
+   ```
+
+3. Salve e feche o arquivo.
+
+4. Recarregue as configurações do systemd para aplicar as alterações:
+
+   ```bash
+   sudo systemctl daemon-reload
+   ```
+
+Após isso, o reinício automático do Nginx estará desativado para que você possa realizar o teste de notificação corretamente.
+
 ### Testando a notificação:
 
 1. Encontre o processo principal do Nginx:
