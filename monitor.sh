@@ -18,6 +18,6 @@ echo "$TIME - Status HTTP: $STATUS" >> "$LOG_FILE"
 if [ "$STATUS" != "200" ]; then
     curl -H "Content-Type: application/json" \
     -X POST \
-    -d "{\"content\": \"🚨 O site $URL está fora do ar! Código HTTP: $STATUS\"}" \
+    -d "{\"content\": \"🚨 O site está fora do ar! Código HTTP: $STATUS\"}" \
     $WEBHOOK_URL
 fi
