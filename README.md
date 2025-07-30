@@ -32,7 +32,7 @@ Este projeto provisiona uma instância EC2 na AWS configurada para monitorar um 
 - Conta na AWS
 - Terraform instalado
 - AWS CLI configurado (com credenciais)
-- Um par de chaves SSH gerado em `~/.ssh/`
+- Um par de chaves SSH gerado em `~/.ssh/` (O projeto gera uma chave automaticamente para você)
 
 ### Como usar (implantação)
 
